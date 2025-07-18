@@ -1,7 +1,6 @@
 import React from 'react'
 import { useBoardStore } from '../lib/store'
 import { KanbanColumn } from './KanbanColumn'
-import { Plus } from 'lucide-react'
 
 const columns = [
   { id: 'todo', title: 'To Do', color: 'bg-gray-100' },
@@ -14,18 +13,20 @@ export function KanbanBoard() {
   const { getTasksByStatus } = useBoardStore()
 
   return (
-    <div className="flex gap-6 overflow-x-auto pb-6">
-      {columns.map((column) => (
-        <KanbanColumn
-          key={column.id}
-          id={column.id}
-          title={column.title}
-          color={column.color}
-          tasks={getTasksByStatus(column.id)}
-        />
-      ))}
-      
-
+    <div className="flex-1 overflow-hidden">
+      <div className="flex gap-3 md:gap-6 overflow-x-auto pb-4 md:pb-6 h-full">
+        {columns.map((column) => (
+          <KanbanColumn
+            key={column.id}
+            id={column.id}
+            title={column.title}
+            color={column.color}
+            tasks={getTasksByStatus(column.id)}
+          />
+        ))}
+        
+    
+      </div>
     </div>
   )
 }

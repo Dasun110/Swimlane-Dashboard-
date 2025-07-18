@@ -5,8 +5,7 @@ import { HTML5Backend } from 'react-dnd-html5-backend'
 import { Sidebar } from '@/components/Sidebar'
 import { Header } from '@/components/Header'
 import { KanbanBoard } from '@/components/KanbanBord'
-
-
+import { ProjectHeader } from '@/components/ProjectHeader'
 
 export default function Home() {
   return (
@@ -16,8 +15,8 @@ export default function Home() {
         <main className="flex-1 flex flex-col">
           <Header />
           <div className="flex-1 p-6">
-                       <KanbanBoard />
-
+            <ProjectHeader />
+            <KanbanBoard />
           </div>
         </main>
       </div>
