@@ -4,6 +4,8 @@ import { DndProvider } from 'react-dnd'
 import { HTML5Backend } from 'react-dnd-html5-backend'
 import { Sidebar } from '@/components/Sidebar'
 import { Header } from '@/components/Header'
+import { KanbanBoard } from '@/components/KanbanBord'
+
 
 
 export default function Home() {
@@ -14,9 +16,8 @@ export default function Home() {
         <main className="flex-1 flex flex-col">
           <Header />
           <div className="flex-1 p-6">
-            {/* Main content goes here */}
-            <h1 className="text-2xl font-bold mb-4">Dashboard</h1>
-            <p>Welcome to your dashboard!</p>
+                       <KanbanBoard />
+
           </div>
         </main>
       </div>
