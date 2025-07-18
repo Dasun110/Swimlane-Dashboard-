@@ -97,6 +97,18 @@ const initialTasks: Task[] = [
     dueDate: '2024-01-18',
     comments: 12,
     attachments: 4
+  },
+  {
+    id: '6',
+    title: 'Frontend Development',
+    description: 'Implement frontend components',
+    status: 'reject',
+    priority: 'high',
+    category: 'development',
+    assignees: ['1', '2', '3'],
+    dueDate: '2024-01-18',
+    comments: 12,
+    attachments: 4
   }
 ]
 
